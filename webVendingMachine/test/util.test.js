@@ -1,4 +1,4 @@
-import {getEl, getElAll,updateText, addClassToList, removeClassToList, clearText} from '../js/utils';
+import {getEl, getElAll,updateText, addClassToList, removeClassToList, clearText} from '../js/util/utils';
 
 'use strict';
 document.body.innerHTML =

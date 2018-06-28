@@ -1,12 +1,12 @@
 // testCode
-import { getEl, getElAll, updateText, addClassToList, removeClassToList, clearText } from'../js/utils.js'
-import { VendingMachineModel } from'./VendingMachineModel.js'
-import { WalletModel } from'./WalletModel.js'
-import { VmController } from'./VMController.js'
-import { SnackListView } from './SnackListView.js'
-import { VendingMachineView } from'./VendingMachineView.js'
-import { WalletView } from './WalletView.js'
-import { snackList, buttonTextList, myMoney} from'./assets.js'
+import { getEl, getElAll, updateText, addClassToList, removeClassToList, clearText } from'./util/utils.js'
+import { VendingMachineModel } from'./model/VendingMachineModel.js'
+import { WalletModel } from'./model/WalletModel.js'
+import { Controller } from'./controller/Controller.js'
+import { SnackListView } from './view/SnackListView.js'
+import { VendingMachineView } from'./view/VendingMachineView.js'
+import { WalletView } from './view/WalletView.js'
+import { snackList, buttonTextList, myMoney} from'./assets/assets.js'
 // template
 
 
@@ -26,7 +26,7 @@ const view = {
   walletView,
   snackListView,
 }
-const vendingMachineController = new VmController(model, view);
+const vendingMachineController = new Controller(model, view);
 
 document.addEventListener("DOMContentLoaded", (e)=> {
   console.log("DOM fully loaded and parsed");

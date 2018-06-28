@@ -1,5 +1,5 @@
-import {getEl, getElAll, updateText, addClassToList, removeClassToList, clearText} from './utils.js';
-import { snackTemplate } from './template.js'
+import {getEl, getElAll, updateText, addClassToList, removeClassToList, clearText} from '../util/utils.js';
+import { snackTemplate } from '../template/template.js'
 
 
 export class SnackListView {

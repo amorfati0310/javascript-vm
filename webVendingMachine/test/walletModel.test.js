@@ -1,5 +1,5 @@
-import { WalletModel } from'../js/WalletModel.js';
-import { myMoney } from '../js/assets';
+import { WalletModel } from'../js/model/WalletModel.js';
+import { myMoney } from '../js/assets/assets';
 
 
 describe('walletModel Test', () => {

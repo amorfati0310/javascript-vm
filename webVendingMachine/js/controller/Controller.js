@@ -1,4 +1,4 @@
-export class VmController {
+export class Controller {
   constructor({wallet, vendingMachine}, {vendingMachineView,walletView, snackListView}){
     Object.assign(this, { vendingMachine, wallet, vendingMachineView, walletView, snackListView});
     this.bindController()

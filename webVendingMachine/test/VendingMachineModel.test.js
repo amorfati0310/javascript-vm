@@ -1,7 +1,7 @@
-import { VendingMachineModel } from'../js/VendingMachineModel.js';
-import { snackList } from'../js/assets';
-import { VendingMachineView } from '../js/VendingMachineView';
-import { getEl } from '../js/utils.js';
+import { VendingMachineModel } from'../js/model/VendingMachineModel.js';
+import { snackList } from'../js/assets/assets';
+import { VendingMachineView } from '../js/view/VendingMachineView';
+import { getEl } from '../js/util/utils.js';
 import { templateMock } from './templateMock.js';
 
 document.body.innerHTML = templateMock;

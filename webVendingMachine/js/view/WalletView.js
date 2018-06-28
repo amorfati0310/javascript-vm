@@ -1,5 +1,5 @@
-import {getEl, updateText} from './utils.js';
-import { walletMoneyButtonTemplate } from './template.js'
+import {getEl, updateText} from '../util/utils.js';
+import { walletMoneyButtonTemplate } from '../template/template.js';
 
 export class WalletView {
   constructor(){

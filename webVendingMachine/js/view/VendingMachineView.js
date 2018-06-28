@@ -1,6 +1,6 @@
-import {getEl, getElAll, updateText, addClassToList, removeClassToList, clearText} from './utils.js';
-import {snackTemplate, selectButtonTemplate, walletMoneyButtonTemplate, logtemplate} from './template.js'
-import {buttonTextList} from './assets.js';
+import {getEl, getElAll, updateText, addClassToList, removeClassToList, clearText} from '../util/utils.js';
+import {snackTemplate, selectButtonTemplate, walletMoneyButtonTemplate, logtemplate} from '../template/template.js'
+import {buttonTextList} from '../assets/assets.js';
 
 export class VendingMachineView {
   constructor(){
@@ -131,21 +131,21 @@ export class VendingMachineView {
   }
   updateLogView(updatedLogData, templateType){
     this.displayLogEl.innerHTML = logtemplate[templateType](updatedLogData);
-    this.startAutoClearLog(templateType)
+    if(templateType!=='nowSelectedNumber')this.startAutoClearLog(templateType)
   }
   startAutoClearLog(type){
     const autoClearTime = 2000
     const nextOrderTime = 3
-    if(type==='nowSelectedNumber') return ;
     const autoClearId = setTimeout(()=> {
-        if(type==="displaySelectedOne"){
-          this.updateLogView(null,'notifySecondOrder')
-          this.setSelectTime(nextOrderTime)
-          this.handleSelectByTime("returnMoney")
-        } 
+        if(type==="displaySelectedOne"&&this.checkHasMoney()) this.handleNextOrder(nextOrderTime)
         else if(type!=='notifySecondOrder'&& type!=='insertMoney') this.handleCancelButtonClicked()
       }, autoClearTime)
       this.emit('sendAutoClearId', autoClearId)
+  }
+  handleNextOrder(nextOrderTime){
+    this.updateLogView(null,'notifySecondOrder')
+    this.setSelectTime(nextOrderTime)
+    this.handleSelectByTime("returnMoney")
   }
   changeStyleselectedLog(){
     const selectedLog = getEl('.selected-button-info', this.displayLogEl)

@@ -1,5 +1,5 @@
-import { SnackListView } from '../js/SnackListView.js';
-import { getElAll } from '../js/utils.js';
+import { SnackListView } from '../js/view/SnackListView.js';
+import { getElAll } from '../js/util/utils.js';
 import { templateMock } from './templateMock.js';
 
 document.body.innerHTML = templateMock;

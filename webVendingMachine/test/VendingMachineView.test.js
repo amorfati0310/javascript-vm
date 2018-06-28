@@ -1,5 +1,5 @@
-import {VendingMachineView} from '../js/VendingMachineView.js';
-import {getEl, getElAll} from '../js/utils.js';
+import {VendingMachineView} from '../js/view/VendingMachineView.js';
+import {getEl, getElAll} from '../js/util/utils.js';
 import {templateMock} from './templateMock.js';
 
 describe('VendingMachineView Test', () => {

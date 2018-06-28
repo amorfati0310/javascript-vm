@@ -1,5 +1,5 @@
-import {WalletView} from '../js/WalletView.js';
-import {getEl} from '../js/utils';
+import {WalletView} from '../js/view/WalletView.js';
+import {getEl} from '../js/util/utils';
 
 
 describe('walletView Test', () => {
